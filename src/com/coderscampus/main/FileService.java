@@ -16,7 +16,7 @@ public class FileService {
 			try {
 				reader = new BufferedReader(new FileReader(fileName));
 				String line = reader.readLine();
-				//System.out.println();
+				
 				while ((line = reader.readLine()) != null) {
 					String[] data = line.split(",");
 					String date = data[0];
@@ -24,7 +24,6 @@ public class FileService {
 
 					storeReport.add(new SalesReport(date, sales));
 
-					//System.out.println(line);
 				}
 
 			} finally {
